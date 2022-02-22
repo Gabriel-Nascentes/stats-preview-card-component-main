@@ -1,0 +1,146 @@
+/* Import da fonte*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* Variáveis */
+:root {
+  --color-main-bg: hsl(233, 47%, 7%);
+  --color-card-bg: hsl(244, 38%, 16%);
+  --color-soft: rgb(170, 92, 219);
+  --color-soft-transparent: rgba(137, 56, 187, 0.65);
+  --color-white: #fff;
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--color-white);
+}
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+body {
+  background-color: var(--color-main-bg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-size: 15px;
+}
+.container {
+  border-radius: 1em;
+  display: flex;
+  margin: auto 50px;
+  align-items: center;
+  width: 60em;
+  height: 25em;
+  z-index: -1;
+}
+
+.main-contant {
+  background-color: var(--color-card-bg);
+  width: 50%;
+  height: 100%;
+  padding: 2em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.img {
+  display: flex;
+  background-color: var(--color-soft-transparent);
+  width: 50%;
+  height: 100%;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+img {
+  z-index: -1;
+  width: 100%;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+/* Informações */
+.titulo span {
+  color: var(--color-soft);
+}
+.nota,
+.titulo {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.information,
+.info {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.information {
+  font-size: 12px;
+  padding-top: 2.5em;
+  line-height: 1.8em;
+}
+
+.nota {
+  font-size: 18px;
+}
+.info {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.main-contant {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em 4em;
+}
+
+.container-classification {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    height: 100%;
+  }
+  .main-contant {
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0.5em;
+  }
+  .container .img {
+    margin-bottom: 50px;
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+  .container .img img {
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+}
+@media (max-width: 550px) {
+  .titulo {
+    font-size: 20px;
+  }
+  .info {
+    font-size: 6px;
+  }
+  .information {
+    padding-top: 5px;
+    font-size: 12px;
+  }
+}
